@@ -1,3 +1,12 @@
 ## YAML Template.
 ---
 language: java
+addons:
+    sonarcloud:
+        organization: "castrorestrepo-github"
+        token:
+            secure: "ZBQ4VoFF+aksfceY2hn8tmjYMANgs9FAgNZW/tqRzY3trmWJCUr2xwjnoWctQtxBG9emAK3qL8Jj96zYxQMdtXaisVE+RHoZilv2+GSiArI2ivnzLQz5mCTA1jT1xo7w+tA7FRYBfH+GE4KF4ScWKjrOPAzQgKV5CNTRpK1ebKhjRyNavEf3lRJHO7mHUJ+xCpsYtYiiJ6dKX2WVT3G0dOLVJA6/2JIhfLaqahNz7I5o1586RMf5PcAoOtN3VYMdGvqTwaYwvafCsS/rCKD4hu6oufq1sWv8dbY5fMt/rbUjMn3ncuxJ6gDwBvMpc+qfNZQThPJTOkvAjTiTYRhMYIRD6Nfe+vHghC7IGbKRCk0v5NB3AJmSILL8Xw1AYlYIymkm3jh6u5a6mc9e8U4zW6fDJIKOGrNAvi02bm5sGVaH7IuMTKte9GrU1wjKzlpLqU8cUlH00mMFibAwAAKOQ9cX0sToDq0FgCy4e2lKbTfPZDaSHWCkD8iZiA1G2OxEmP3dJ7eFVuAkz1x1QsX5JFAHhSvhJZdFTcXDbLZ7pFMYyduyJxjYM5Odo7FUGA3uTOf3lv8cTxJWT2t/LzCwpJ3AXOhiU3plTw+n5sv9II7irLZSXU+UeiNVIbApOKh0WEKiN41+lGaY1jmrA/57bgvXSdZlvN8ZGBjtPttsYWU="
+script:
+    - mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install sonar:sonar
+    - sonar-scanner
+   
