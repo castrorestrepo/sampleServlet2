@@ -4,9 +4,17 @@
         <servlet-name>firsServlet</servlet-name>
         <servlet-class>edu.udem.java2.ejemplo1.sampleservlet2.firsServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>SubmitFromJSPServlet</servlet-name>
+        <servlet-class>edu.udem.java2.ejemplo1.sampleservlet2.SubmitFromJSPServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>firsServlet</servlet-name>
         <url-pattern>/firsServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>SubmitFromJSPServlet</servlet-name>
+        <url-pattern>/SubmitFromJSPServlet</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
